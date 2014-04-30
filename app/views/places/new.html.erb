@@ -1,0 +1,15 @@
+<h2>Add your wherebook</h2>
+
+<%= simple_form_for @place do |form| %>
+
+	<%= form.input :booktitle %>
+	<%= form.input :address %>
+	<%= form.input :description %>
+<!--	<%= form.input :latitude %>
+ removed because geocode will do it for us
+ 	<%= form.input :longitude %> -->
+	<%= form.input :approximate, input_html: { checked: false } %>
+
+	<%= form.button :submit %>
+
+<% end %>
