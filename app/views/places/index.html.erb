@@ -18,7 +18,10 @@ and inserting the lat and long variables-->
 				<h3><%= place.booktitle %></h3>
 				<p><%= place.description %></p>
 				<p><%= place.address %></p>
-				<p>Is approximate? <%= place.approximate %></p>
+
+				<% if place.approximate %>
+					<p>This is an approximate location.</p>
+				<% end %>
 
 				<% if params[:search].present? %>
 				<p>
