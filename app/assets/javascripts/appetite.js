@@ -47,6 +47,7 @@ $(document).ready(function () {
 
 	map.fitBounds(bounds);
 
+	$("#zoomButton").on("click", function () {map.setZoom(2); return false; });
 
 
 });
